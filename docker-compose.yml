@@ -1,0 +1,21 @@
+version: '2'
+services:
+ db:
+  container_name: db
+  image: mongo:3.4
+ schedule-feed:
+  depends_on: ["db"]
+  container_name: schedule-feed
+  image: java:8
+  volumes: 
+   - ./schedule-feed:/schedule-feed
+  command: bash -c "cd /schedule-feed/target/ && java -jar schedule-feed-0.0.1.jar --spring.data.mongodb.host=db"
+ feed-rest-api:
+  depends_on: ["db", "schedule-feed"]
+  container_name: feed-rest-api
+  image: java:8
+  volumes: 
+   - ./feed-rest-api:/feed-rest-api
+  ports: 
+   - 8080:8080
+  command: bash -c "cd /feed-rest-api/target/ && java -jar feed-rest-api-0.0.1.jar --spring.data.mongodb.host=db"
