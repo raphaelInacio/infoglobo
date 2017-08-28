@@ -1,6 +1,6 @@
 # Infoglobo
 
-**Arquitetura do projeto**
+## Arquitetura
 
 O projeto segue arquitetura de microserviços com containers, possuindo 3 microserviços:
 
@@ -15,7 +15,7 @@ permitindo apenas usuários cadastrados realizar a consulta dos feeds.
 O Serviço de DataBase é responsável por armazenar as informações vindas do Schedule e fornecer esses dados para o serviço REST,
 esse serviço é compartilhado por dois microserviços, REST e Schedule
 
-**Tencnologias Utilzadas**
+## Tencnologias Utilzadas
 
 Como base para desenvolvimento dos microserviços foi escolhido o microframework Spring Boot e MongoDB para o banco de dados, abaixo segue a lista de tecnogias base utilizadas.
 
@@ -25,7 +25,7 @@ Como base para desenvolvimento dos microserviços foi escolhido o microframework
 - MongoDB
 - Docker
 
-#2 Executando o projeto
+## Executando o projeto
  
 **Iniciando o MongoDB**
 
@@ -53,8 +53,5 @@ As APIs estão protegidas com autenticação Basic Authorization.
 user : infoglobo
 password : desafio
 
-
-**Executar um projeto via linha de comando**
--mvn spring-boot:run  - (http://localhost:8080/)
 
 
