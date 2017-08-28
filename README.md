@@ -25,19 +25,34 @@ Como base para desenvolvimento dos microserviços foi escolhido o microframework
 - MongoDB
 - Docker
 
-**Executando o projeto com Docker**
-docker-container up
+#2 Executando o projeto
+ 
+**Iniciando o MongoDB**
+
+Primeiro será necessário Iniciar o MongoDB, caso você ja tenha o docker instalado basta executar 
+
+sudo docker container run -it -p 27017:27017 mongo:3.4 
+
+**Build do projeto**
+
+Entre no diretório raiz dos microserviços (/infoglobo) execute o comando abaixo.
+
+cd schedule-feed && mvn clean install && cd .. && cd feed-rest-api && mvn clean install
+
+**Excutando os containers**
+
+sudo docker-container up
 
 **Consutando a API de feeds**
+
 localhost:8080/api/feeds
 
 **Relizando Autenticação**
-As APIs estão protegidas com autenticação Basic Authorization em memória.
+
+As APIs estão protegidas com autenticação Basic Authorization.
 user : infoglobo
 password : desafio
 
-**Instalando dependencias java**
--mvn compile
 
 **Executar um projeto via linha de comando**
 -mvn spring-boot:run  - (http://localhost:8080/)
