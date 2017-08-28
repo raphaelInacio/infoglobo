@@ -34,7 +34,7 @@ public class FeedScheduler {
 	private FeedProcessorService feedProcessorService;
 
 	@Autowired
-	FeedRepository feedRepository;
+	private FeedRepository feedRepository;
 
 	@Scheduled(fixedDelay = HORA)
 	public void findNewFeeds() {

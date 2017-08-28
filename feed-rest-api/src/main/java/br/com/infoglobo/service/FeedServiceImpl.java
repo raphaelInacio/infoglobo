@@ -15,7 +15,7 @@ import br.com.infoglobo.repository.FeedRepository;
 public class FeedServiceImpl implements FeedService {
 
 	@Autowired
-	FeedRepository repository;
+	private FeedRepository repository;
 
 	@Override
 	public ResponseEntity<FeedJson> findAllFeeds() {
