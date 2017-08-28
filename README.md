@@ -1,6 +1,6 @@
 # Infoglobo
 
-## Arquitetura
+### Arquitetura
 
 O projeto segue arquitetura de microserviços com containers, possuindo 3 microserviços:
 
@@ -15,7 +15,7 @@ permitindo apenas usuários cadastrados realizar a consulta dos feeds.
 O Serviço de DataBase é responsável por armazenar as informações vindas do Schedule e fornecer esses dados para o serviço REST,
 esse serviço é compartilhado por dois microserviços, REST e Schedule
 
-## Tencnologias Utilzadas
+### Tencnologias Utilzadas
 
 Como base para desenvolvimento dos microserviços foi escolhido o microframework Spring Boot e MongoDB para o banco de dados, abaixo segue a lista de tecnogias base utilizadas.
 
@@ -25,33 +25,39 @@ Como base para desenvolvimento dos microserviços foi escolhido o microframework
 - MongoDB
 - Docker
 
-## Executando o projeto
+### Executando o projeto
  
 **Iniciando o MongoDB**
 
 Primeiro será necessário Iniciar o MongoDB, caso você ja tenha o docker instalado basta executar 
 
+```
 sudo docker container run -it -p 27017:27017 mongo:3.4 
-
+```
 **Build do projeto**
 
 Entre no diretório raiz dos microserviços (/infoglobo) execute o comando abaixo.
 
-cd schedule-feed && mvn clean install && cd .. && cd feed-rest-api && mvn clean install
+```
+cd schedule-feed && mvn clean install && cd .. && cd feed-rest-api && mvn clean insta
+```
 
 **Excutando os containers**
-
+```
 sudo docker-container up
-
+```
 **Consutando a API de feeds**
 
+```
 localhost:8080/api/feeds
-
+```
 **Relizando Autenticação**
 
 As APIs estão protegidas com autenticação Basic Authorization.
+
+```
 user : infoglobo
 password : desafio
-
+```
 
 
