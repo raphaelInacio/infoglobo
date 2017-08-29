@@ -38,7 +38,7 @@ sudo docker container run -it -p 27017:27017 mongo:3.4
 Agora precisamos gerar os jars de cada microserviço, então, entre no diretório raiz dos microserviços (/infoglobo) execute o comando abaixo.
 
 ```
-cd schedule-feed && mvn clean install && cd .. && cd feed-rest-api && mvn clean insta
+cd schedule-feed && mvn clean package && cd .. && cd feed-rest-api && mvn clean package
 ```
 
 O comando executado gerá o build dos projetos utilizando o maven.
