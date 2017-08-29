@@ -26,26 +26,7 @@ Para desenvolvimento dos microserviços foi escolhido o microframework Spring Bo
 
 ### Executando o projeto
  
-**Iniciando o MongoDB**
-
-Primeiro será necessário Iniciar o MongoDB, se você já tem o docker instalado execute o comando abaixo 
-
-```
-sudo docker container run -it -p 27017:27017 mongo:3.4 
-```
-**Build do projeto**
-
-Agora precisamos gerar os jars de cada microserviço, então, entre no diretório raiz dos microserviços (/infoglobo) execute o comando abaixo.
-
-```
-cd schedule-feed && mvn clean install && cd .. && cd feed-rest-api && mvn clean insta
-```
-
-O comando executado gerá o build dos projetos utilizando o maven.
-
 **Excutando os containers**
-
-Com os jars de cada microserviço gerado, precisamos subir os containers e testar nosso projeto.
 
 Na raiz o projeto temos o docker-compose.yml, responsável por montar as imagens necessárias e subir nossos serviços, para executar o docker-compose execute o comando abaixo.
 
