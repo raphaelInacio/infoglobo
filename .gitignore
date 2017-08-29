@@ -1,13 +1,19 @@
 # Directories #
 build/
 bin/
-#target/
 libs/
 tmp/
 node_modules/
 jaxws/jaxws-client/src/main/
 Servers/
 .recommenders/
+classes/
+generated-sources/
+generated-test-sources/
+maven-archiver/
+maven-status/
+surefire-reports/
+test-classes/
  
 # OS Files #
 .DS_Store
@@ -15,7 +21,6 @@ Servers/
 *.class
  
 # Package Files #
-*.jar
 *.war
 *.ear
 *.db
